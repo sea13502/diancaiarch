@@ -20,5 +20,8 @@
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "flux": "^2.1.1"
   }
 }
