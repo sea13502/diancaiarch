@@ -1,4 +1,5 @@
 var React = require("react");
+var Dish = require( "./DishComponent.js" );
 
 var DishgroupComponent = React.createClass({
 	render:function(){
@@ -7,16 +8,14 @@ var DishgroupComponent = React.createClass({
 		var dishGroupName = this.props.dishGroupName;
 		var dishArr = [];
 		dishArr.push(
-			<div className="dishtitle">
+			<div key="name" className="dishtitle">
 				{ dishGroupName }
 			</div>
 		);
 
 		for( var i = 0 ; i < dishGroup.length ; i++ ){
 			dishArr.push(
-				<div>
-					{dishGroup[i].name }
-				</div>
+				<Dish key={ dishGroup[i].itemId } dish={ dishGroup[i] } />
 			);
 		}
 
